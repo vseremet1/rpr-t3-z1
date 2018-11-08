@@ -7,11 +7,12 @@ public class Program {
     public static  void main(String[] args)
     {
         Imenik telefonskiBrojevi= new Imenik ();
-        ((Imenik) telefonskiBrojevi).dodaj("Suzana", "033/458-465");
+        FiksniBroj fiksniBroj= new FiksniBroj(FiksniBroj.Grad.SARAJEVO, "456123" );
+        ((Imenik) telefonskiBrojevi).dodaj("Suzana", fiksniBroj);
 
         System.out.println ("Broj od Suzana je: " + ((Imenik) telefonskiBrojevi).dajBroj("Suzana"));
 
-        Set<String> izGrada = telefonskiBrojevi.izGrada("Sarajevo");
+        Set<String> izGrada = telefonskiBrojevi.izGrada(FiksniBroj.Grad.SARAJEVO);
 
 
 
